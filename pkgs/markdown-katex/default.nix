@@ -2,6 +2,7 @@
   lib,
   python3Packages,
   fetchPypi,
+  lib3to6,
 }:
 
 with python3Packages;
