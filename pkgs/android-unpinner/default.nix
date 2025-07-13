@@ -6,7 +6,7 @@
 
 with python3Packages;
 
-buildPythonPackage {
+buildPythonPackage rec {
   pname = "android-unpinner";
   version = "202107.1047";
 
