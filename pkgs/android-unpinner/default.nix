@@ -27,4 +27,12 @@ buildPythonPackage {
   build-system = with python3Packages; [
     setuptools
   ];
+
+  meta = {
+    description = "Remove Certificate Pinning from APKs";
+    homepage = "https://github.com/mitmproxy/android-unpinner";
+    changelog = "https://github.com/mitmproxy/android-unpinner/releases/tag/${version}";
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ ivyfanchiang ];
+  };
 }
