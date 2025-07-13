@@ -19,4 +19,5 @@
   fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion/default.nix { };
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet/default.nix { };
   lib3to6 = pkgs.callPackage ./pkgs/lib3to6/default.nix { };
+  markdown-katex = pkgs.callPackage ./pkgs/markdown-katex/default.nix { };
 }
