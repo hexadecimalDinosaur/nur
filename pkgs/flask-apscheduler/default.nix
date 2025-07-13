@@ -1,17 +1,20 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
+  pythonOlder,
   fetchFromGitHub,
+  setuptools,
+  flask,
+  apscheduler,
+  python-dateutil,
 }:
-
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "flask-apscheduler";
   version = "1.13.1";
   format = "setuptools";
 
-  disabled = python3Packages.pythonOlder "3.8";
+  disabled = pythonOlder "3.8";
 
   src = fetchFromGitHub {
     owner = "viniciuschiele";
@@ -20,13 +23,13 @@ buildPythonPackage rec {
     hash = "sha256-0gZueUuBBpKGWE6OCJiJL/EEIMqCVc3hgLKwIWFuSZI=";
   };
 
-  propagatedBuildInputs = with python3Packages; [
+  propagatedBuildInputs = [
     setuptools
   ];
 
   pythonImportsCheck = [ "flask_apscheduler" ];
 
-  dependencies = with python3Packages; [
+  dependencies = [
     flask
     apscheduler
     python-dateutil

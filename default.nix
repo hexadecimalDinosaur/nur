@@ -8,18 +8,12 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-rec {
+{
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  android-unpinner = pkgs.callPackage ./pkgs/android-unpinner/default.nix { };
-  decompyle3 = pkgs.callPackage ./pkgs/decompyle3/default.nix { };
-  flask-apscheduler = pkgs.callPackage ./pkgs/flask-apscheduler/default.nix { };
   fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion/default.nix { };
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet/default.nix { };
-  lib3to6 = pkgs.callPackage ./pkgs/lib3to6/default.nix { };
-  markdown-katex = pkgs.callPackage ./pkgs/markdown-katex/default.nix { inherit lib3to6; };
-  pyinstxtractor-ng = pkgs.callPackage ./pkgs/pyinstxtractor-ng/default.nix { };
 }

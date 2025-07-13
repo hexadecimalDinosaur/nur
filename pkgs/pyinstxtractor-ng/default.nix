@@ -1,10 +1,12 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
   fetchFromGitHub,
+  poetry-core,
+  pythonRelaxDepsHook,
+  xdis,
+  pycryptodome,
 }:
-
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "pyinstxtractor-ng";
@@ -18,15 +20,15 @@ buildPythonPackage rec {
   };
 
   pyproject = true;
-  build-system = with python3Packages; [ poetry-core ];
-  nativeBuildInputs = with python3Packages; [
+  build-system = [ poetry-core ];
+  nativeBuildInputs = [
     pythonRelaxDepsHook
   ];
 
   pythonRelaxDeps = [
     "pycryptodome"
   ];
-  dependencies = with python3Packages; [
+  dependencies = [
     xdis
     pycryptodome
   ];

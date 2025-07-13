@@ -1,10 +1,11 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
   fetchFromGitHub,
+  setuptools,
+  rich-click,
 }:
 
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "android-unpinner";
@@ -19,12 +20,12 @@ buildPythonPackage rec {
 
   doCheck = false;
 
-  dependencies = with python3Packages; [
+  dependencies = [
     rich-click
   ];
 
   pyproject = true;
-  build-system = with python3Packages; [
+  build-system = [
     setuptools
   ];
 

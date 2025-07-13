@@ -1,10 +1,14 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
   fetchPypi,
+  setuptools,
+  wheel,
+  pathlib2,
+  astor,
+  click,
 }:
 
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "lib3to6";
@@ -17,14 +21,14 @@ buildPythonPackage rec {
 
   doCheck = false;
 
-  dependencies = with python3Packages; [
+  dependencies = [
     pathlib2
     astor
     click
   ];
 
   pyproject = true;
-  build-system = with python3Packages; [
+  build-system = [
     setuptools
     wheel
   ];

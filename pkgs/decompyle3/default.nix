@@ -1,10 +1,13 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
   fetchFromGitHub,
+  pythonOlder,
+  xdis,
+  click,
+  configobj,
+  spark-parser
 }:
-
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "decompyle3";
@@ -18,9 +21,9 @@ buildPythonPackage rec {
   };
 
   format = "setuptools";
-  disabled = python3Packages.pythonOlder "3.7";
+  disabled = pythonOlder "3.7";
 
-  propagatedBuildInputs = with python3Packages; [
+  propagatedBuildInputs = [
     xdis
     click
     configobj

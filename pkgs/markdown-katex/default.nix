@@ -1,11 +1,13 @@
 {
   lib,
-  python3Packages,
+  buildPythonPackage,
   fetchPypi,
+  setuptools,
+  wheel,
+  markdown,
   lib3to6,
+  pathlib2,
 }:
-
-with python3Packages;
 
 buildPythonPackage rec {
   pname = "markdown-katex";
@@ -18,14 +20,14 @@ buildPythonPackage rec {
 
   doCheck = false;
 
-  dependencies = with python3Packages; [
+  dependencies = [
     markdown
     lib3to6
     pathlib2
   ];
 
   pyproject = true;
-  build-system = with python3Packages; [
+  build-system = [
     setuptools
     wheel
   ];
