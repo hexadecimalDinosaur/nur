@@ -12,6 +12,7 @@ final: prev: {
           ../pkgs/xdis/xdis.patch
         ];
       });
+      x-python = pyfinal.callPackage ../pkgs/x-python/default.nix { inherit xdis; };
     })
   ];
 }
