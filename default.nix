@@ -21,4 +21,5 @@ rec {
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet/default.nix { };
   lib3to6 = pkgs.callPackage ./pkgs/lib3to6/default.nix { };
   markdown-katex = pkgs.callPackage ./pkgs/markdown-katex/default.nix { inherit lib3to6; };
+  pyinstxtractor-ng = pkgs.callPackage ./pkgs/pyinstxtractor-ng/default.nix { };
 }
