@@ -18,4 +18,5 @@
   flask-apscheduler = pkgs.callPackage ./pkgs/flask-apscheduler/default.nix { };
   fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion/default.nix { };
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet/default.nix { };
+  lib3to6 = pkgs.callPackage ./pkgs/lib3to6/default.nix { };
 }
