@@ -80,7 +80,7 @@ jobs:
           -I nixpkgs=$(nix-instantiate --find-file nixpkgs) \
           -I $PWD
     - name: Build nix packages
-      run: 'with import <nixpkgs> { overlays = [(import ./default.nix {}).overlays.python ]; }; ${{ matrix.pythonVersion }}Packages.${{ matrix.pythonPackage }}'
+      run: nix-build -E 'with import <nixpkgs> { overlays = [(import ./default.nix {}).overlays.python ]; }; ${{ matrix.pythonVersion }}Packages.${{ matrix.pythonPackage }}'
     - name: Trigger NUR update
       # Don't replace <YOUR_REPO_NAME> here!
       if: ${{ matrix.nurRepo != '<YOUR_REPO_NAME>' }}
