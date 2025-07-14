@@ -18,11 +18,11 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "jetbrains-fleet";
-  version = "1.48.236";
+  version = "1.48.261";
 
   src = fetchzip {
     url = "https://download-cdn.jetbrains.com/fleet/installers/linux_x64/Fleet-${finalAttrs.version}.tar.gz";
-    hash = "sha256-Ond7Buqsozxw3Xa9IVt8kwbTT4NCO7lCKNeQqWbCjdE=";
+    hash = "sha256-rDcc8v43vEw0ayOD+awMYWI19kuTcssIi03r1UJeC4M=";
     stripRoot = true;
   };
 
