@@ -14,7 +14,8 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  android-unpinner = pkgs.python3.pkgs.callPackage ./pkgs/android-unpinner/default.nix { };
-  fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion/default.nix { };
-  jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet/default.nix { };
+  android-unpinner = pkgs.python3.pkgs.callPackage ./pkgs/android-unpinner { };
+  fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion { };
+  harmonoid = pkgs.callPackage ./pkgs/harmonoid { };
+  jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet { };
 }
