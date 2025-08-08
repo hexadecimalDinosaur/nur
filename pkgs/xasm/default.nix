@@ -40,5 +40,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/rocky/xasm/releases/tag/${version}";
     license = lib.licenses.gpl2Only;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "pyc-xasm";
   };
 }

@@ -41,5 +41,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/pyinstxtractor/pyinstxtractor-ng/releases/tag/${version}";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "pyinstxtractor-ng";
   };
 }

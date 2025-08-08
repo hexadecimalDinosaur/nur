@@ -35,5 +35,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/mitmproxy/android-unpinner/releases/tag/${version}";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "android-unpinner";
   };
 }

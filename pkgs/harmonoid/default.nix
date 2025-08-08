@@ -72,7 +72,7 @@ stdenv.mkDerivation (finalAttrs: {
     changelog = "https://github.com/harmonoid/harmonoid/releases/tag/v${finalAttrs.version}";
     maintainers = with lib.maintainers; [ ivyfanchiang ];
     platforms = [ "x86_64-linux" ];
-    license = rec {
+    license = {
       fullName = "PolyForm Strict License 1.0.0";
       url = "https://polyformproject.org/licenses/strict/1.0.0/";
       free = false;

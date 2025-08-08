@@ -39,5 +39,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/rocky/python-decompile3/releases/tag/${version}";
     license = lib.licenses.gpl3Plus;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "decompyle3";
   };
 }

@@ -45,5 +45,6 @@ stdenv.mkDerivation (finalAttrs: {
     homepage = "https://github.com/OpenAttackDefenseTools/tulip/";
     license = lib.licenses.gpl3Only;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "tulip-flagids";
   };
 })

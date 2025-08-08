@@ -37,5 +37,6 @@ buildPythonPackage rec {
     changelog = "https://github.com/rocky/x-python/releases/tag/${version}";
     license = lib.licenses.mit;
     maintainers = with lib.maintainers; [ ivyfanchiang ];
+    mainProgram = "xpython";
   };
 }
