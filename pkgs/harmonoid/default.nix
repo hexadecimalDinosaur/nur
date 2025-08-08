@@ -77,5 +77,6 @@ stdenv.mkDerivation (finalAttrs: {
       url = "https://polyformproject.org/licenses/strict/1.0.0/";
       free = false;
     };
+    sourceProvenance = with lib.sourceTypes; [ binaryNativeCode ];
   };
 })
