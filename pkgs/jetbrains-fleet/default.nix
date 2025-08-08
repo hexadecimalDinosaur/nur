@@ -89,6 +89,8 @@ stdenv.mkDerivation (finalAttrs: {
     })
   ];
 
+  passthru.updateScript = ./update.sh;
+
   meta = {
     description = "More Than a Code Editor";
     longDescription = "Fleet is a code editor designed for simplicity, combining a clean UI, AI capabilities, and an essential set of built-in features for most major languages.";
