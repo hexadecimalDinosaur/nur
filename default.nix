@@ -8,7 +8,7 @@
 
 { pkgs ? import <nixpkgs> { } }:
 
-{
+rec {
   # The `lib`, `modules`, and `overlays` names are special
   lib = import ./lib { inherit pkgs; }; # functions
   modules = import ./modules; # NixOS modules
@@ -18,4 +18,12 @@
   fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion { };
   harmonoid = pkgs.callPackage ./pkgs/harmonoid { };
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet { };
+  tulip = pkgs.callPackage ./pkgs/tulip {
+    inherit tulip-api tulip-assembler tulip-enricher tulip-flagids tulip-frontend;
+  };
+  tulip-api = pkgs.callPackage ./pkgs/tulip-api { };
+  tulip-assembler = pkgs.callPackage ./pkgs/tulip-assembler { };
+  tulip-enricher = pkgs.callPackage ./pkgs/tulip-enricher { };
+  tulip-flagids = pkgs.callPackage ./pkgs/tulip-flagids { };
+  tulip-frontend = pkgs.callPackage ./pkgs/tulip-frontend { };
 }
