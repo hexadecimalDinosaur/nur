@@ -14,7 +14,7 @@ let
   p313 = pkgs.python313;
   p3 = pkgs.python3.pkgs;
 
-  pythonPackages = p: pkgs.recurseIntoAttrs ((import ./python.nix { lib = pkgs.lib; }) p.version p.pkgs p.pkgs);
+  pythonPackages = p: pkgs.recurseIntoAttrs ((import ./python.nix { inherit pkgs; lib = pkgs.lib; }) p.version p.pkgs p.pkgs);
 in
 rec {
   # The `lib`, `modules`, and `overlays` names are special
