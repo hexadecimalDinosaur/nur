@@ -26,6 +26,7 @@ rec {
   fzf-tab-completion = pkgs.callPackage ./pkgs/fzf-tab-completion { };
   harmonoid = pkgs.callPackage ./pkgs/harmonoid { };
   jetbrains-fleet = pkgs.callPackage ./pkgs/jetbrains-fleet { };
+  ttf-ms-win11 = pkgs.recurseIntoAttrs ( import ./pkgs/ttf-ms-win11 { inherit pkgs; } );
 
   tulip = pkgs.callPackage ./pkgs/tulip {
     inherit tulip-api tulip-assembler tulip-enricher tulip-flagids tulip-frontend;
