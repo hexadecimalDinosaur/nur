@@ -12,6 +12,7 @@ let
   });
 in
 (rec {
+  davey = pyfinal.callPackage ./pkgs/davey/default.nix { };
   dearpygui = pyfinal.callPackage ./pkgs/dearpygui/default.nix { };
   decompyle3 = pyfinal.callPackage ./pkgs/decompyle3/default.nix { inherit xdis; };
   doc2dash = pyfinal.callPackage ./pkgs/doc2dash/default.nix { };
@@ -19,7 +20,7 @@ in
   lib3to6 = pyfinal.callPackage ./pkgs/lib3to6/default.nix { };
   markdown-katex = pyfinal.callPackage ./pkgs/markdown-katex/default.nix { inherit lib3to6; };
   protobuf-inspector = pyfinal.callPackage ./pkgs/protobuf-inspector/default.nix { };
-  pyghidra = pyfinal.callPackage ./pkgs/pyghidra/default.nix { };
+  # pyghidra = pyfinal.callPackage ./pkgs/pyghidra/default.nix { };
   pyinstxtractor-ng = pyfinal.callPackage ./pkgs/pyinstxtractor-ng/default.nix { inherit xdis; };
   xasm = pyfinal.callPackage ./pkgs/xasm/default.nix { inherit xdis x-python; };
   inherit xdis;
