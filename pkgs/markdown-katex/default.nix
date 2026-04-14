@@ -10,7 +10,7 @@
   pathlib2,
   pytestCheckHook,
   beautifulsoup4,
-  nodePackages
+  katex
 }:
 
 let
@@ -30,14 +30,14 @@ buildPythonPackage rec {
 
   postPatch = ''
     rm src/markdown_katex/bin/*
-    ln -s ${nodePackages.katex.out}/bin/katex src/markdown_katex/bin/katex_${os_str}
+    ln -s ${katex.out}/bin/katex src/markdown_katex/bin/katex_${os_str}
   '';
 
   dependencies = [
     markdown
     lib3to6
     pathlib2
-    nodePackages.katex
+    katex
   ];
 
   pyproject = true;
