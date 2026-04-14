@@ -12,6 +12,7 @@ let
   });
 in
 (rec {
+  davey = pyfinal.callPackage ./pkgs/davey/default.nix { };
   dearpygui = pyfinal.callPackage ./pkgs/dearpygui/default.nix { };
   decompyle3 = pyfinal.callPackage ./pkgs/decompyle3/default.nix { inherit xdis; };
   doc2dash = pyfinal.callPackage ./pkgs/doc2dash/default.nix { };
